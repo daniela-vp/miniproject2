@@ -1,4 +1,5 @@
 function ListItem({ item, onDelete }) {
+  
     const rateItem = (rating) => {
         return rating >= 4.50 ? "Best product on the market!" : "";
       };
@@ -21,3 +22,6 @@ function ListItem({ item, onDelete }) {
     }
     
     export default ListItem;
+
+
+  

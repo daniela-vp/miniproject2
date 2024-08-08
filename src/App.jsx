@@ -1,20 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import Navbar from './homepage/Navbar'
 import Sidebar from './homepage/Sidebar'
 import Footer from './homepage/Footer'
-import DataList from './components/DataList'
+import HomePage from './components/HomePage'
 import './App.css'
+import { Routes, Route ,NavLink } from 'react-router-dom'
+import AboutPage from './components/AboutPage'
+import NotFound from './components/NotFoundPage'
 
 function App() {
 
   return (  
     <>
-     <Navbar />
+     <nav>
+        <NavLink to="/">Home </NavLink>
+        <NavLink to="/about">About</NavLink>
+        
+      
+      </nav>
 
-     <DataList />
-
+     <Routes>
+        {/* <Route path="/" element={<DashboardPage />} /> */}
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/*" element={<NotFound />} />
+        
+      </Routes>
 
      <Sidebar />
 
@@ -22,8 +32,10 @@ function App() {
      <Footer />
 
     </>
+    
    
   )
 }
 
-export default App
+export default App;
+

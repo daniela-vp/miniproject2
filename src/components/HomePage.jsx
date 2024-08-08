@@ -2,7 +2,7 @@ import { useState } from "react";
 import data from "../assets/data/data.json"
 import List from "./List";
 
-function DataList() {
+function HomePage() {
     const [items, setItems] = useState(data);
   
     const deleteItem = (id) => {
@@ -17,4 +17,4 @@ function DataList() {
     );
   }
   
-  export default DataList;
+  export default HomePage;
