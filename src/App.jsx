@@ -6,6 +6,7 @@ import './App.css'
 import { Routes, Route ,NavLink } from 'react-router-dom'
 import AboutPage from './components/AboutPage'
 import NotFound from './components/NotFoundPage'
+import ItemDetailsPage from './components/ItemDetailsPage'
 
 function App() {
 
@@ -22,6 +23,9 @@ function App() {
         {/* <Route path="/" element={<DashboardPage />} /> */}
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
+
+        <Route path="/items/:itemId" element= {<ItemDetailsPage/>}/>
+        
         <Route path="/*" element={<NotFound />} />
         
       </Routes>

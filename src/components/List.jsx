@@ -1,9 +1,9 @@
-import ListItem from "./ListItem";
+import ItemSummary from "./ItemSummary";
 function List({ items, onDelete }) {
     return (
         <section className="DataList">
           {items.map((item) => (
-            <ListItem key={item.id} item={item} onDelete={onDelete} />
+            <ItemSummary key={item.id} item={item} onDelete={onDelete} />
           ))}
         </section>
       );
