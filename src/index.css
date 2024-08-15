@@ -4,7 +4,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(39, 35, 35, 0.87);
   background-color: #242424;
 
   font-synthesis: none;
@@ -42,7 +42,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #c4b1b1;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -54,15 +54,74 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #b9b9b9;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  height: auto;
+  width: calc(25% - 20px); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(165, 220, 237);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: solid rgb(0, 0, 0);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.card .price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.Navh1 {
+  color: rgb(0, 0, 0)
+}
+
+.sidebar {
+  border: 5px, rgb(39, 156, 127);
+}
+
+.AddItem form {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  
+}
+
+.AddItem label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.AddItem button {
+  padding: 5px;
+  background-color: #6e94c086;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.AddItem button:hover {
+  background-color: #4086d686;
 }

@@ -18,10 +18,9 @@ function AddItem({ addItem }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newItem = { title, brand, price: parseFloat(price), category };
-    
-    console.log("Submitted", newItem);
+
     addItem(newItem);
-   
+
     setTitle("");
     setBrand("");
     setPrice("");
@@ -31,17 +30,55 @@ function AddItem({ addItem }) {
     <div className="AddItem">
       <h4>Add an Item</h4>
       <form onSubmit={handleSubmit}>
-        <label> Title: </label>
-        <input type="text" name="title" value={title} onChange={handleTitleInput} />
+        <label>
+          Title:
+          <input
+            type="text"
+            name="title"
+            required
+            placeholder="Enter title"
+            value={title}
+            onChange={handleTitleInput}
+          />
+        </label>
 
-        <label> Brand: </label>
-        <input type="text" name="brand" value={brand} onChange={handleBrandInput} />
+        <label>
+          Brand:
+          <input
+            type="text"
+            name="brand"
+            required
+            placeholder="Enter brand"
+            value={brand}
+            onChange={handleBrandInput}
+          />
+        </label>
 
-        <label> Price:€</label>
-        <input type="number" name="price" value={price} onChange={handlePriceInput} />
+        <label>
+          Price:
+          <input
+            type="number"
+            name="price"
+            required
+            min={0}
+            max={10000}
+            placeholder="Enter price"
+            value={price}
+            onChange={handlePriceInput}
+          />
+        </label>
 
-        <label> Category: </label>
-        <input type="text" name="category" value={category} onChange={handleCategoryInput} />
+        <label>
+          Category:
+          <input
+            type="text"
+            name="category"
+            required
+            placeholder="Enter category"
+            value={category}
+            onChange={handleCategoryInput}
+          />
+        </label>
         <button type="submit">Add an Item</button>
       </form>
     </div>

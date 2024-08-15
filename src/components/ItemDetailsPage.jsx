@@ -1,18 +1,18 @@
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import data from "../assets/data/data.json"
 
-function ItemDetailsPage() {
+function ItemDetailsPage(props) {
 
     const { itemId } = useParams();
+    const location = useLocation();
 
+    const item = location.state?.updatedItem || props.items.find((item) => item.id === parseInt(itemId));
 
-    //    const item = data.find();
-    const item = data.find((item) => item.id === parseInt(itemId));
     if (!item) {
+        i
         return <p>Item not found.</p>;
     }
-
 
     return (
         <div>
@@ -26,6 +26,8 @@ function ItemDetailsPage() {
             <p>Brand: {item.brand}</p>
             <p>Category: {item.category}</p>
             <p>Rating: {item.rating}</p>
+            <Link to={`/`}>Back</Link>
+            <Link to={`/updateitem/${item.id}`}>Update Item</Link>
 
 
 
